@@ -10,23 +10,16 @@ public class Solution {
         int i = digits.length - 1;
         
         while(i >= 0){
-            if(i == 0 && digits[i] == 9 ){
-                int[] results = new int[digits.length + 1];
-                results[0]++;
-                return results;
-                
-            }
-            if(digits[i] == 9){
-                digits[i] = 0;
-            }
-            else{
+            if(digits[i] < 9){
                 digits[i]++;
-                break;
+                return digits;
             }
-            
+            digits[i] = 0;
             --i;
         }
-        return digits;
+        int[] results = new int[digits.length + 1];
+        results[0]++;
+        return results;
     }
 }
 /* 
