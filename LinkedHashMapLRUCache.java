@@ -23,7 +23,7 @@ public class LRUCache {
             cache.remove(key);
         }
         else if(this.capacity == cache.size()){
-           //remove last one
+           //remove first
            Iterator<Integer> i = cache.keySet().iterator();
            int last = i.next(); 
            cache.remove(last);
