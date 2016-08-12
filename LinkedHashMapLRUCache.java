@@ -1,4 +1,8 @@
-public class LRUCache {
+/*
+https://leetcode.com/problems/lru-cache/
+LinkedHashMap: https://docs.oracle.com/javase/7/docs/api/java/util/LinkedHashMap.html
+*/
+ublic class LRUCache {
 
     
     int capacity;
