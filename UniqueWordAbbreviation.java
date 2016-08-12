@@ -30,6 +30,8 @@ public class ValidWordAbbr {
 
     public boolean isUnique(String word) {
         String a = getAbbr(word);
+        //you're putting abbrevations as the key, if the value of that abbreviation is "" then it's false bc there was another one
+        //if it equals the word, it's in the dictionary and it is the only one with that abbrevation
         return !map.containsKey(a) || map.get(a).equals(word);
         //check if word is in dictionary, if it is then you need to check if there is another one that has the same abbr
         //if not in dictionary, check if there is another word that has same abbr in dictionaryh
